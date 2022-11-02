@@ -4,7 +4,6 @@ const express = require('express')
 const app = express()
 
 app.get('/', async (req, res) => {
-    // Fetch random img from unsplash api.
     let image = await axios('https://source.unsplash.com/random');
     res.send(`<img src="${image.request.res.responseUrl}" />`)
 })
